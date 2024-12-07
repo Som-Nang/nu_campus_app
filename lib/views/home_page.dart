@@ -1,6 +1,8 @@
 import 'package:campus_app/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'college_page.dart';
+
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
 
@@ -90,6 +92,8 @@ class _HomePageViewState extends State<HomePageView> {
                 ],
               ),
               const Divider(),
+
+              //menu
               const SizedBox(height: 10),
               const Row(
                 children: [
@@ -223,11 +227,13 @@ class _HomePageViewState extends State<HomePageView> {
                   )
                 ],
               ),
+
+              //college
               const SizedBox(height: 20),
               const Row(
                 children: [
                   Text(
-                    'Available Academics',
+                    'College',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: kTextGrayColor),
                   ),
@@ -250,15 +256,25 @@ class _HomePageViewState extends State<HomePageView> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            height: 150,
-                            width: MediaQuery.of(context).size.width * 0.80,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: const Color(0xff34495e),
-                                image: DecorationImage(
-                                    fit: BoxFit.contain,
-                                    image: NetworkImage(item['image'] ?? ''))),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CollegePageView()));
+                            },
+                            child: Container(
+                              height: 150,
+                              width: MediaQuery.of(context).size.width * 0.80,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: kLessDeepBgColor,
+                                  image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image:
+                                          NetworkImage(item['image'] ?? ''))),
+                            ),
                           ),
                           const SizedBox(height: 5),
                           Padding(
@@ -280,6 +296,8 @@ class _HomePageViewState extends State<HomePageView> {
                   },
                 ),
               ),
+
+              //News and Event
               const Row(
                 children: [
                   Text(
@@ -292,7 +310,7 @@ class _HomePageViewState extends State<HomePageView> {
               const SizedBox(height: 10),
               Container(
                   width: size.width,
-                  height: 170,
+                  height: 160,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: kLessDeepBgColor),
@@ -319,7 +337,6 @@ class _HomePageViewState extends State<HomePageView> {
                                   color: kTextMarkColor,
                                   fontWeight: FontWeight.normal),
                             ),
-                            const SizedBox(height: 10),
                             const SizedBox(height: 10),
                             const Text(
                               '''I was also thinking about blending the two images together, but haven't found a way of doing that except using opacity or something. Ideally would like it to be rendered natively rather than using "hacks" to achieve it.''',
@@ -388,7 +405,7 @@ class _HomePageViewState extends State<HomePageView> {
               const SizedBox(height: 10),
               Container(
                   width: size.width,
-                  height: 170,
+                  height: 160,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: kLessDeepBgColor),
@@ -415,7 +432,6 @@ class _HomePageViewState extends State<HomePageView> {
                                   color: kTextMarkColor,
                                   fontWeight: FontWeight.normal),
                             ),
-                            const SizedBox(height: 10),
                             const SizedBox(height: 10),
                             const Text(
                               '''I was also thinking about blending the two images together, but haven't found a way of doing that except using opacity or something. Ideally would like it to be rendered natively rather than using "hacks" to achieve it.''',
@@ -484,7 +500,7 @@ class _HomePageViewState extends State<HomePageView> {
               const SizedBox(height: 10),
               Container(
                   width: size.width,
-                  height: 170,
+                  height: 160,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: kLessDeepBgColor),
@@ -511,7 +527,6 @@ class _HomePageViewState extends State<HomePageView> {
                                   color: kTextMarkColor,
                                   fontWeight: FontWeight.normal),
                             ),
-                            const SizedBox(height: 10),
                             const SizedBox(height: 10),
                             const Text(
                               '''I was also thinking about blending the two images together, but haven't found a way of doing that except using opacity or something. Ideally would like it to be rendered natively rather than using "hacks" to achieve it.''',

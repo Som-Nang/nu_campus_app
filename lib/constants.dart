@@ -9,4 +9,4 @@ const kTextMarkColor = Color(0xff37684E);
 const kBgCardColor = Color(0xffF8FBF2);
 const kGreenDeepColor = Color(0xff245a3c);
 const kTextGrayColor = Color(0xff4B5563);
-const kLessDeepBgColor = Color(0xffecffe0);
+const kLessDeepBgColor = Color(0xffecf2e8);
