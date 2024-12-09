@@ -10,3 +10,4 @@ const kBgCardColor = Color(0xffF8FBF2);
 const kGreenDeepColor = Color(0xff245a3c);
 const kTextGrayColor = Color(0xff4B5563);
 const kLessDeepBgColor = Color(0xffecf2e8);
+const kBlueColor = Color(0xffe8daef);

@@ -1,4 +1,5 @@
 import 'package:campus_app/constants.dart';
+import 'package:campus_app/views/dpt_page.dart';
 import 'package:flutter/material.dart';
 
 class CollegePageView extends StatefulWidget {
@@ -68,12 +69,23 @@ class _CollegePageViewState extends State<CollegePageView> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Text(
-                                      item['dpt'] ?? '',
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: kGreenDeepColor),
-                                    )
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const DptPageDetail()));
+                                      },
+                                      child: Text(
+                                        item['dpt'] ?? '',
+                                        style: const TextStyle(
+                                            decoration:
+                                                TextDecoration.underline,
+                                            fontWeight: FontWeight.bold,
+                                            color: kGreenDeepColor),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               )

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:campus_app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -298,13 +300,24 @@ class _HomePageViewState extends State<HomePageView> {
               ),
 
               //News and Event
-              const Row(
+              Row(
                 children: [
-                  Text(
-                    'News & Event',
+                  const Text(
+                    'News And Event',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: kTextGrayColor),
                   ),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const Text(
+                      "See All",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold,
+                          color: kTextGrayColor),
+                    ),
+                  )
                 ],
               ),
               const SizedBox(height: 10),
@@ -329,6 +342,8 @@ class _HomePageViewState extends State<HomePageView> {
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
                               'ផ្នែកពាណិជ្ជសាស្ត្រនៃសាកលវិទ្យាល័យន័រតុនបានរៀបចំ',
@@ -582,6 +597,223 @@ class _HomePageViewState extends State<HomePageView> {
                                       '1.3K View',
                                       style: TextStyle(
                                           color: kTextMarkColor, fontSize: 10),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ))
+                    ],
+                  )),
+
+              //Job Opportunity
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  const Text(
+                    'Jon Oppotunity',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: kTextGrayColor),
+                  ),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const Text(
+                      "See All",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold,
+                          color: kTextGrayColor),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+              Container(
+                  width: size.width,
+                  height: 160,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: kBlueColor),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 150,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://cdn.norton-u.com/blog/September-2024/flasdoor1726707046.webp'))),
+                      ),
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Sale and Consultant',
+                              maxLines: 1,
+                              style: TextStyle(
+                                  color: kTextGrayColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
+                              '''Business Field: Premium Gift, Advertising Material and BrandingWebsite: www.flasdoor.com&nbsp;Job Description&nbsp;Meet clients, consulting and providing the best solution to clients&nbsp;Follow up an...''',
+                              maxLines: 4,
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  color: kTextGrayColor,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            const Divider(
+                              color: kTextGrayColor,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: const Text(
+                                    'Read>>',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color:
+                                          kTextGrayColor, // Customizable color
+                                    ),
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Row(
+                                  children: [
+                                    Icon(
+                                      Icons.fmd_good_outlined,
+                                      color: kTextGrayColor,
+                                      size: 12,
+                                    ),
+                                    SizedBox(width: 1),
+                                    Text(
+                                      'PhnomPenh',
+                                      style: TextStyle(
+                                          color: kTextGrayColor, fontSize: 10),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(width: 5),
+                                const Row(
+                                  children: [
+                                    Icon(
+                                      Icons.remove_red_eye,
+                                      color: kTextGrayColor,
+                                      size: 12,
+                                    ),
+                                    SizedBox(width: 1),
+                                    Text(
+                                      '1.3K View',
+                                      style: TextStyle(
+                                          color: kTextGrayColor, fontSize: 10),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ))
+                    ],
+                  )),
+              const SizedBox(height: 10),
+              Container(
+                  width: size.width,
+                  height: 160,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: kBlueColor),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 150,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://cdn.norton-u.com/blog/September-2024/flasdoor1726707046.webp'))),
+                      ),
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Sale and Consultant',
+                              maxLines: 1,
+                              style: TextStyle(
+                                  color: kTextGrayColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
+                              '''Business Field: Premium Gift, Advertising Material and BrandingWebsite: www.flasdoor.com&nbsp;Job Description&nbsp;Meet clients, consulting and providing the best solution to clients&nbsp;Follow up an...''',
+                              maxLines: 4,
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  color: kTextGrayColor,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            const Divider(
+                              color: kTextGrayColor,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: const Text(
+                                    'Read>>',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color:
+                                          kTextGrayColor, // Customizable color
+                                    ),
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Row(
+                                  children: [
+                                    Icon(
+                                      Icons.fmd_good_outlined,
+                                      color: kTextGrayColor,
+                                      size: 12,
+                                    ),
+                                    SizedBox(width: 1),
+                                    Text(
+                                      'PhnomPenh',
+                                      style: TextStyle(
+                                          color: kTextGrayColor, fontSize: 10),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(width: 5),
+                                const Row(
+                                  children: [
+                                    Icon(
+                                      Icons.remove_red_eye,
+                                      color: kTextGrayColor,
+                                      size: 12,
+                                    ),
+                                    SizedBox(width: 1),
+                                    Text(
+                                      '1.3K View',
+                                      style: TextStyle(
+                                          color: kTextGrayColor, fontSize: 10),
                                     ),
                                   ],
                                 )
